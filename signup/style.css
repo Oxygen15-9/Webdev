@@ -10,6 +10,7 @@ html,body{
 	background-color: #207b62;
 	color: #fff;
 	cursor: context-menu;
+	overflow: hidden;
 }
 body{
 	display: flex;
@@ -28,7 +29,7 @@ body{
 	font-size: 40px;
 }
 #para1{
-	font-size: 13px;
+	font-size: 2.5vh;
 	color: darkturquoise;
 	margin: 20px 0;
 }
@@ -50,7 +51,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	margin-right: 20px;
-	transition: .5s;
+	transition: .2s;
 	cursor: pointer;
 }
 .button a{
@@ -59,12 +60,25 @@ body{
 }
 .button:hover{
 	background-color: darkturquoise;
-	border: 2px solid darkturquoise;
+	border: 2px solid transparent;
 }
 
 				/* right side */
 #box1{
-	margin-top: 90px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+.overlay{
+	width: 150vh;
+	height: 150vh;
+	left: 48%;
+	background-color: #09513d;
+	position: absolute;
+	border-radius: 50%;
+	z-index: -1;
 }
 h2{
 	font-size: 45px;
@@ -83,8 +97,10 @@ h2{
 	color: cyan;
 }
 form{
-	display: inline-flex;
+	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 #fname{
 	display: flex;
@@ -95,25 +111,23 @@ form{
 	color: lightgrey;
 }
 #fname input{
-	width: 245px;
 	height: 40px;
 	border: 2px solid darkturquoise;
 	background-color: transparent;
 	color: #fff;
 	font-size: 15px;
-	border-radius: 10px;
 	margin: 10px 0;
 	padding: 10px;
 	transition: .3s;
 	outline: none;
 }
-input:hover{
-	border: 2px solid cyan;
+.hover:hover{
+	width: 420px;
 }
 .input{
 	margin: 10px 0;
 	height: 40px;
-	width: 500px;
+	width: 400px;
 	border: 2px solid darkturquoise;
 	background-color: transparent;
 	color: #fff;
@@ -121,25 +135,113 @@ input:hover{
 	border-radius: 10px;
 	padding: 10px;
 	outline: none;
+	transition: .3s;
 }
 #check{
 	display: flex;
-	margin: 10px 0;
+	margin: 5px 0;
+	margin-left: 11vw;
 	justify-content: flex-end;
 }
 #check input{
 	cursor: pointer;
+
 }
 #check p{
 	color: darkturquoise;
+	cursor: pointer;
 }
-#signup{
+#login{
 	background-color: darkturquoise;
 	cursor: pointer;
 	border-radius: 20px;
-	font-size: 15px;
-	transition: .5s;
+	font-size: 2.7vh;
+	transition: .2s;
+	width: 200px;
 }
-#signup:hover{
+#login:hover{
 	background-color: transparent;
+}
+		/*signup page*/
+
+.signup{
+	z-index: 2;
+	background-color: #5b484375;
+	display: flex;
+}
+.signleft{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	right: 205vh;
+}
+.signright{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 15vh;
+	padding-left: 20vh;
+	left: 185vh;
+}
+	/*Responsive*/
+@media (max-width: 375px){
+	.box2{
+		position: absolute;
+		right: 70vh;
+	}
+	#box1{
+		position: absolute;
+		left: 14vh;
+		top: 24vh;
+/*		border: 1px solid darkturquoise;*/
+
+	}
+	.hover:hover{
+		width: 80vw;
+	}
+	.input{
+		width: 40vh;
+	}
+	#box1 h2{
+		font-size: 12vw;
+		margin-bottom: 5vw;
+	}
+	#box1 .link,#check{
+		font-size: 4.1vw;
+/*		border: 1px solid darkturquoise;*/
+		width: 70vw;
+	} 
+	#box1 .link{
+		position: absolute;
+		top: 61vh;
+		margin-left: 12vw;
+/*		border: 1px solid darkturquoise;*/
+
+	}
+	#check{
+		margin-right: 13vw;
+	}
+	#login{
+		margin-top: 6vw;
+		width: 40vw;
+	}
+	.signleft{
+		right: 39.5vh;
+		opacity: 0;
+	}
+	.signleft .link{
+		position: absolute;
+		bottom: 11%;
+/*		border: 1px solid darkturquoise;*/
+		width: 70vw;
+		margin-left: 12vw;
+		font-size: 4vw;
+	}
+	.signleft h2{
+		margin-bottom: 4vw;
+	} 
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<!-- left side -->
-	<div class="box">
+	<div class="box box2">
 		<div id="left">
 			<h4>JOIN FOR FREE</h4>
 			<p id="para">
@@ -25,21 +25,56 @@
 	</div>
 	<!-- right side -->
 	<div class="box" id="box1">
-		<h2>Create new account</h2>
-		<div class="link">Already A Member?<a href="#">Log in</a></div>
+		<div class="overlay"></div>
+		<h2>Login</h2>
+		<div class="link">Don't have an account?<a href="#"> Sign up</a></div>
 		<form>
 			<div id="fname">
-				<input type="name" class="input" placeholder="First Name">
-				<input type="name" class="input" placeholder="Last Name">
+				<input type="name" class="input hover" placeholder="User Name">
 			</div>
-			<input type="Email" class="input" placeholder="Email">
-			<input type="Password" class="input" placeholder="Password">
+			<input type="Email" class="input hover" placeholder="Email">
+			<input type="Password" class="input hover" placeholder="Password">
 			<div id="check">
-				<input type="checkbox">I Agree with <p>&nbsp; privacy</p>&nbsp; and <p>&nbsp; policy</p>
+				<input type="checkbox">&nbsp;Remember me<p>&nbsp; Forgot Password?</p>
 			</div>
-			<input type="submit" class="input" id="signup" value="Sign up">
+			<button class="input" id="login">Login</button>
 		</form>
 	</div>
-</body>
+	<div class="signup">
+		<div class="signleft">
+			<h2>Sign up</h2>
+			<div class="link">Already have an account?
+				<a href="#"> Login</a>
+			</div>
+			<form>
+				<input type="text" class="input hover" placeholder="User name">
+				<input type="Email" class="input hover" placeholder="Email">
+				<input type="Password" class="input hover" placeholder="Password">
+				<input type="Password" class="input hover" placeholder="Confirm Password">
+			<div id="check">
+				<input type="checkbox">&nbsp;I Agree with <p>&nbsp; privacy</p>&nbsp; and <p>&nbsp; policy</p>
+			</div>
+
+			<button class="input" id="login">Sign up</button>
+			</form>
+		</div>
+		<div class="signright">
+
+			<div id="left">
+				<h4>JOIN FOR FREE</h4>
+				<p id="para">
+					Unleash the traveler <br>
+					<a>inside YOU</a>, Enjoy your<br>
+					Dream Vacation<br>
+					<p id="para1">Get Started with the easiest and most secure website to buy travel tickets</p>
+				</p>
+				</div>
+			<div id="btn">
+				<div class="button"><a href="#">Explore more</a></div>
+				<div class="button"><a href="#">Book Now</a></div>
+			</div>
+		</div>
+	</div><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script type="text/javascript" src="script.js"></script>
+</body>
 </html>
